@@ -1,0 +1,9 @@
+[
+    {
+   	"requestURL": "http://localhost:8080/user/login",
+	"formUsernameIdentifier": "userName",
+	"formPassworodIdentifier": "password",
+	"sucessKey": "status\":\"1",
+	"requestDelay": "1"
+    }
+]
