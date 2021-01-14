@@ -35,7 +35,11 @@ for credential in credentials:
     	#look for a sucessful login
     	if sucessKey in response.text:
     	    print('sucess')
-    	    sucessList.append(credObj)
+    	    stdObj = {
+    	    	"username": credential['username'],
+    	    	"password": credential['password']
+    	    }
+    	    sucessList.append(stdObj)
 
     #delay before proceeding to next credential
     time.sleep(requestDelay)
