@@ -4,6 +4,6 @@
 	"formUsernameIdentifier": "userName",
 	"formPassworodIdentifier": "password",
 	"sucessKey": "status\":\"1",
-	"requestDelay": "1"
+	"requestDelay": "3"
     }
 ]
