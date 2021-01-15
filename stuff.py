@@ -54,7 +54,7 @@ for credential in credentials:
 finishTime = time.perf_counter()
 seconds = finishTime - startTime
 print(str(counter) + " credentials stuffed in " + str(seconds) + " seconds")
-print("writing suceffuly stuffed credentials to sucess.json\nexiting...")
+print("writing sucessfuly stuffed credentials to sucess.json\nexiting...")
 outFile = open('sucess.json', 'w', encoding='utf-8')
 json.dump(sucessList, outFile, ensure_ascii=False, indent=4)
 outFile.close
